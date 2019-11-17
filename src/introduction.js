@@ -2,7 +2,17 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import { BlockQuote, Cite, Deck, Heading, Slide, Text } from "spectacle";
+import {
+  BlockQuote,
+  Cite,
+  CodePane,
+  Deck,
+  Fill,
+  Heading,
+  Layout,
+  Slide,
+  Text
+} from "spectacle";
 
 import CodeSlide from "spectacle-code-slide";
 
@@ -46,31 +56,61 @@ export default class Presentation extends React.Component {
           </Text>
           <br />
           <BlockQuote>
-            <Cite textColor="secondary">@liliatux</Cite>
+            <Cite textColor="secondary">Zélia @liliatux</Cite>
           </BlockQuote>
         </Slide>
-        <Slide transition={["zoom", "fade"]}>
-          <Heading textColor="secondary" size={4}>
-            React without Hooks
-          </Heading>
-        </Slide>
-          <CodeSlide
-            lang="javascript"
-            /* eslint import/no-webpack-loader-syntax: off */
-            code={require("!!raw-loader!./WithoutHooks.js").default}
-            ranges={[{ loc: [0, 40] },
-            { loc: [5,11]}]}            
-          />
         <Slide>
           <WithoutHooks />
         </Slide>
-        <Slide transition={["zoom", "fade"]}>
-          <Heading textColor="secondary" size={4}>
-            React Hooks
-          </Heading>
-        </Slide>
+        <CodeSlide
+          lang="jsx"
+          /* eslint import/no-webpack-loader-syntax: off */
+          code={require("!!raw-loader!./WithoutHooks.js").default}
+          ranges={[
+            { loc: [0, 45], title: "React without Hooks" },
+            { loc: [3, 11] },
+            { loc: [12, 15] },
+            { loc: [16, 21] },
+            { loc: [22, 26] },
+            { loc: [27, 41] }
+          ]}
+        />
         <Slide>
           <WithHooks />
+        </Slide>
+        <CodeSlide
+          lang="jsx"
+          /* eslint import/no-webpack-loader-syntax: off */
+          code={require("!!raw-loader!./WithHooks.js").default}
+          ranges={[
+            { loc: [0, 31], title: "React with Hooks" },
+            { loc: [3, 5] },
+            { loc: [7, 14] },
+            { loc: [15, 18] },
+            { loc: [19, 27] }
+          ]}
+        />
+        <Slide transition={["slide"]}>
+          <Layout>
+            <Fill>
+              <Heading size="6" textColor="white">
+                Class Component
+              </Heading>
+              <CodePane
+                lang="jsx"
+                source={require("!!raw-loader!./WithoutHooks.js").default}
+              />
+            </Fill>
+            <Fill>
+              <Heading size={6} textColor="white">
+                Function Component
+              </Heading>
+              <CodePane
+                lang="jsx"
+                source={require("!!raw-loader!./WithHooks.js").default}
+              />
+            </Fill>
+          </Layout>
         </Slide>
       </Deck>
     );

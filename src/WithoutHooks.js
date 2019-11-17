@@ -5,20 +5,22 @@ class WithoutHooks extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: ""
+      city: "",
+      count: 0
     };
+    this.handleChange = this.handleChange.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.setState({ city: "Toulouse" });
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.city !== this.state.city) {
+      this.setState({ count: prevState.count + 1 });
+    }
+  }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.city === "") {
-  //     this.setState({ city: "Amiens" });
-  //   }
-  // }
+  componentWillUnmount() {
+    this.setState({ city: "", count: 0 });
+  }
 
   handleChange(event) {
     // Not merge state
@@ -27,16 +29,22 @@ class WithoutHooks extends Component {
 
   render() {
     return (
-      <form>
-        <label>
-          City:
-          <input
-            name="city"
-            value={this.state.city}
-            onChange={this.handleChange}
-          />
-        </label>
-      </form>
+      <div>
+        <form>
+          <label>
+            City:
+            <input
+              name="city"
+              value={this.state.city}
+              onChange={this.handleChange}
+            />
+          </label>
+        </form>
+        <br />
+        {this.state.count > 0 && (
+          <span>Number of mouse enter {this.state.count}</span>
+        )}
+      </div>
     );
   }
 }
