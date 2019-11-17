@@ -29,7 +29,6 @@ const theme = createTheme(
 
 export default class Presentation extends React.Component {
   render() {
-    console.log(require("raw-loader!./WithoutHooks"));
     return (
       <Deck
         transition={["zoom"]}
@@ -55,14 +54,13 @@ export default class Presentation extends React.Component {
             React without Hooks
           </Heading>
         </Slide>
-        <Slide>
           <CodeSlide
-            lang="js"
+            lang="javascript"
             /* eslint import/no-webpack-loader-syntax: off */
-            code={require("raw-loader!./WithoutHooks")}
-            ranges={[]}
+            code={require("!!raw-loader!./WithoutHooks.js").default}
+            ranges={[{ loc: [0, 40] },
+            { loc: [5,11]}]}            
           />
-        </Slide>
         <Slide>
           <WithoutHooks />
         </Slide>

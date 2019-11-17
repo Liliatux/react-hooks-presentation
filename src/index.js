@@ -7,6 +7,8 @@ import Redbox from "redbox-react";
 // import Presentation from './presentation';
 import Presentation from "./introduction";
 
+require("react-hot-loader/patch")
+
 const CustomErrorReporter = ({ error }) => <Redbox error={error} />;
 
 CustomErrorReporter.propTypes = {
