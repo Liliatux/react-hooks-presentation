@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // You need a class component to manage your local state
-class WithoutHooks extends Component {
+export default class WithoutHooksSimple extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,5 +30,3 @@ class WithoutHooks extends Component {
     );
   }
 }
-
-export default WithoutHooks;

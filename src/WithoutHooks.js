@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // You need a class component to manage your local state
-class WithoutHooks extends Component {
+export default class WithoutHooks extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,7 +9,10 @@ class WithoutHooks extends Component {
       count: 0
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({ city: "Toulouse" });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -48,5 +51,3 @@ class WithoutHooks extends Component {
     );
   }
 }
-
-export default WithoutHooks;
