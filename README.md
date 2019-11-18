@@ -3,7 +3,7 @@ This présentation was made for the [Meetup ReactJS & React Native Toulouse](htt
 ## Installation 
 `npm install`
 
-## Run the présentation
+## Run the presentation
 
 ### Development
 `npm start`
@@ -14,4 +14,4 @@ This présentation was made for the [Meetup ReactJS & React Native Toulouse](htt
 ## Ressources
  - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
  - The slides was build with [Spectacle](https://github.com/FormidableLabs/spectacle)
- - The code slide with [spectacle-code-slide](https://github.com/jamiebuilds/spectacle-code-slide)
+ - The code slides with [spectacle-code-slide](https://github.com/jamiebuilds/spectacle-code-slide)
