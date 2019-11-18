@@ -121,10 +121,12 @@ export default class Presentation extends React.Component {
           /* eslint import/no-webpack-loader-syntax: off */
           code={require("!!raw-loader!./WithoutHooksSimple.js").default}
           ranges={[
-            { loc: [0, 45], title: "Class component" },
-            { loc: [3, 11] },
-            { loc: [12, 16] },
-            { loc: [17, 27] }
+            { loc: [0, 30], title: "Class component" },
+            { loc: [0, 3] },
+            { loc: [3, 8] },
+            { loc: [15, 29] },
+            { loc: [23, 24] },
+            { loc: [8, 14] }
           ]}
         />
         <CodeSlide
@@ -132,11 +134,12 @@ export default class Presentation extends React.Component {
           /* eslint import/no-webpack-loader-syntax: off */
           code={require("!!raw-loader!./WithHooksSimple.js").default}
           ranges={[
-            { loc: [0, 31], title: "Function component" },
-            { loc: [3, 5] },
-            { loc: [7, 14] },
-            { loc: [15, 18] },
-            { loc: [19, 28] }
+            { loc: [0, 18], title: "Function component" },
+            { loc: [0, 3] },
+            { loc: [3, 4] },
+            { loc: [9, 17] },
+            { loc: [13, 14] },
+            { loc: [5, 8] }
           ]}
         />
         <Slide>
@@ -190,12 +193,11 @@ export default class Presentation extends React.Component {
           /* eslint import/no-webpack-loader-syntax: off */
           code={require("!!raw-loader!./WithoutHooks.js").default}
           ranges={[
-            { loc: [0, 54], title: "Class component" },
-            { loc: [3, 11] },
-            { loc: [12, 16] },
-            { loc: [16, 21] },
-            { loc: [22, 26] },
-            { loc: [27, 41] }
+            { loc: [0, 51], title: "Class component" },
+            { loc: [7, 8] },
+            { loc: [44, 47] },
+            { loc: [12, 21] },
+            { loc: [22, 25] }
           ]}
         />
         <CodeSlide
@@ -203,11 +205,11 @@ export default class Presentation extends React.Component {
           /* eslint import/no-webpack-loader-syntax: off */
           code={require("!!raw-loader!./WithHooks.js").default}
           ranges={[
-            { loc: [0, 31], title: "Function component" },
-            { loc: [3, 5] },
-            { loc: [7, 14] },
-            { loc: [15, 18] },
-            { loc: [19, 27] }
+            { loc: [0, 30], title: "Function component" },
+            { loc: [4, 5] },
+            { loc: [30, 31] },
+            { loc: [0, 1] },
+            { loc: [6, 12] }
           ]}
         />
         <Slide>

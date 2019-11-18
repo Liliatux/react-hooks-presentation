@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-// Hooks can't be use in a class component
-function WithHooks() {
+export default function WithHooks() {
   const [city, setCity] = useState("");
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(-1);
 
-  // side effect
   useEffect(() => {
     setCount(count + 1);
-  }, [city !== ""]);
+    return () => {
+      setCount(-1);
+    };
+  }, [city]);
 
   function handleChange(event) {
     setCity(event.target.value);
@@ -22,9 +23,8 @@ function WithHooks() {
           <input name="city" value={city} onChange={handleChange} />
         </label>
       </form>
-      {count > 0 && <span>{<span>Number of mouse enter {count}</span>}</span>}
+      <br />
+      {count > 0 && <span>Number of mouse enter {count}</span>}
     </div>
   );
 }
-
-export default WithHooks;

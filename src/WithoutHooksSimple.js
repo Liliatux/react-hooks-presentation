@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-// You need a class component to manage your local state
 export default class WithoutHooksSimple extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +10,6 @@ export default class WithoutHooksSimple extends Component {
   }
 
   handleChange(event) {
-    // Not merge state
     this.setState({ [event.target.name]: event.target.value });
   }
 

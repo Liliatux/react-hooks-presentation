@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-// Hooks can't be use in a class component
-function WithHooks() {
+export default function WithHooks() {
   const [city, setCity] = useState("");
 
   function handleChange(event) {
@@ -17,5 +16,3 @@ function WithHooks() {
     </form>
   );
 }
-
-export default WithHooks;

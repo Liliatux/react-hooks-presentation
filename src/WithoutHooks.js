@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 
-// You need a class component to manage your local state
 export default class WithoutHooks extends Component {
   constructor(props) {
     super(props);
     this.state = {
       city: "",
-      count: 0
+      count: -1
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
-    this.setState({ city: "Toulouse" });
+    this.setState(prevState => ({ count: prevState.count + 1 }));
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -22,11 +21,10 @@ export default class WithoutHooks extends Component {
   }
 
   componentWillUnmount() {
-    this.setState({ city: "", count: 0 });
+    this.setState({ city: "", count: -1 });
   }
 
   handleChange(event) {
-    // Not merge state
     this.setState({ [event.target.name]: event.target.value });
   }
 
