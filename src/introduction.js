@@ -219,6 +219,7 @@ export default class Presentation extends React.Component {
               </Heading>
               <Text textColor="secondary">(without Hooks)</Text>
               <CodePane
+                textSize={10}
                 lang="jsx"
                 source={require("!!raw-loader!./WithoutHooks.js").default}
               />
@@ -229,6 +230,7 @@ export default class Presentation extends React.Component {
               </Heading>
               <Text textColor="secondary">(with Hooks)</Text>
               <CodePane
+                textSize={10}
                 lang="jsx"
                 source={require("!!raw-loader!./WithHooks.js").default}
               />
