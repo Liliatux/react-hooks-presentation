@@ -64,7 +64,6 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="secondary">
             Summary
           </Heading>
-          <br />
           <List ordered>
             <Appear>
               <ListItem>Introduction of Hooks [Zélia]</ListItem>
@@ -98,7 +97,6 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="tertiary">
             Simple example
           </Heading>
-          <br />
           <Layout>
             <Fill>
               <Heading size={6} textColor="secondary">
@@ -170,7 +168,6 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="tertiary">
             Advanced example
           </Heading>
-          <br />
           <Layout>
             <Fill>
               <Heading size={6} textColor="secondary">
