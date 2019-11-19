@@ -146,5 +146,5 @@ pre[class*="language-"] {
 }
 
 .spectacle-content pre {
-	height: 100% !important;
+	height: fit-content !important;
 }
