@@ -52,7 +52,11 @@ export default class Presentation extends React.Component {
         bgColor="primary"
         contentWidth={1400}
       >
-        <Slide transition={["zoom"]}>
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("./assets/react.png")}
+          bgDarken={0.75}
+        >
           <Heading textColor="secondary" size={4}>
             Meetup React Hooks
           </Heading>
@@ -209,7 +213,7 @@ export default class Presentation extends React.Component {
           ]}
         />
         <Slide>
-          <Layout>
+          <Layout style={{ marginTop: "10rem" }}>
             <Fill>
               <Heading size="6" textColor="white">
                 Class Component
