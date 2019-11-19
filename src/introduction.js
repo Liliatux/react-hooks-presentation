@@ -76,10 +76,10 @@ export default class Presentation extends React.Component {
               <ListItem>HOC and TypeScript with Hooks [Antoine]</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Redux with/without Hooks [Geoffrey, Yann]</ListItem>
+              <ListItem>Redux with Hooks [Adrien]</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Example of Fetch with Hooks [Adrien]</ListItem>
+              <ListItem>Example of fetch with Hooks [Yann]</ListItem>
             </Appear>
             <Appear>
               <ListItem>Advanced Hooks [Benjamin]</ListItem>
@@ -193,11 +193,10 @@ export default class Presentation extends React.Component {
           /* eslint import/no-webpack-loader-syntax: off */
           code={require("!!raw-loader!./WithoutHooks.js").default}
           ranges={[
-            { loc: [0, 51], title: "Class component" },
+            { loc: [0, 47], title: "Class component" },
             { loc: [7, 8] },
-            { loc: [44, 47] },
-            { loc: [12, 21] },
-            { loc: [22, 25] }
+            { loc: [40, 43] },
+            { loc: [12, 21] }
           ]}
         />
         <CodeSlide
@@ -205,11 +204,11 @@ export default class Presentation extends React.Component {
           /* eslint import/no-webpack-loader-syntax: off */
           code={require("!!raw-loader!./WithHooks.js").default}
           ranges={[
-            { loc: [0, 30], title: "Function component" },
+            { loc: [0, 27], title: "Function component" },
             { loc: [4, 5] },
-            { loc: [30, 31] },
+            { loc: [23, 24] },
             { loc: [0, 1] },
-            { loc: [6, 12] }
+            { loc: [6, 9] }
           ]}
         />
         <Slide>

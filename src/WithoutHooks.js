@@ -20,12 +20,8 @@ export default class WithoutHooks extends Component {
     }
   }
 
-  componentWillUnmount() {
-    this.setState({ city: "", count: -1 });
-  }
-
   handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ city: event.target.value });
   }
 
   render() {
@@ -43,7 +39,7 @@ export default class WithoutHooks extends Component {
         </form>
         <br />
         {this.state.count > 0 && (
-          <span>Number of mouse enter {this.state.count}</span>
+          <span>Number of input changes: {this.state.count}</span>
         )}
       </div>
     );

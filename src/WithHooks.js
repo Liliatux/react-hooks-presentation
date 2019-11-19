@@ -6,9 +6,6 @@ export default function WithHooks() {
 
   useEffect(() => {
     setCount(count + 1);
-    return () => {
-      setCount(-1);
-    };
   }, [city]);
 
   function handleChange(event) {
@@ -24,7 +21,7 @@ export default function WithHooks() {
         </label>
       </form>
       <br />
-      {count > 0 && <span>Number of mouse enter {count}</span>}
+      {count > 0 && <span>Number of input changes: {count}</span>}
     </div>
   );
 }
