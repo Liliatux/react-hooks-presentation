@@ -58,11 +58,19 @@ export default class Presentation extends React.Component {
           bgDarken={0.75}
         >
           <Heading textColor="secondary" size={4}>
-            Meetup React Hooks
+            Meetup React Toulouse #6
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" bold>
-            React 16.8
+          <Text textColor="tertiary" bold>
+            React Hooks 16.8
           </Text>
+          <div className="sponsors">
+            <Text size={2} caps textColor="secondary">
+              Innov'Atm
+            </Text>
+            <Text size={2} caps textColor="secondary">
+              At Home
+            </Text>
+          </div>
         </Slide>
         <Slide textColor="tertiary">
           <Heading size={4} textColor="secondary">
